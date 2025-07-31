@@ -1,0 +1,28 @@
+/* CSS styles for the dashboard */
+
+#main-container {
+    padding: 1;
+}
+
+NodeTable {
+    height: 100%;
+    width: 100%;
+}
+
+/* Color coding for different statuses */
+.status-idle {
+    color: green;
+}
+
+.status-allocated {
+    color: blue;
+}
+
+.status-down {
+    color: red;
+}
+
+.unreachable {
+    color: gray;
+    text-style: italic;
+}

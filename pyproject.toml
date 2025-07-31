@@ -1,0 +1,21 @@
+[project]
+name = "dashboard"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "JnyJny", email = "erik.oshaughnessy@gmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "aiohttp>=3.12.15",
+    "prometheus-client>=0.22.1",
+    "textual>=5.1.1",
+]
+
+[project.scripts]
+dashboard = "dashboard:main"
+
+[build-system]
+requires = ["uv_build>=0.8.2,<0.9.0"]
+build-backend = "uv_build"

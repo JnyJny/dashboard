@@ -17,6 +17,8 @@ class NodeTable(DataTable):
     
     async def update_nodes(self, nodes: Dict[str, Dict[str, Any]]):
         """Update the table with new node data."""
+        # Debug: print node count
+        self.app.console.print(f"[DEBUG] NodeTable updating with {len(nodes)} nodes")
         self.nodes_data = nodes
         self._refresh_table()
     

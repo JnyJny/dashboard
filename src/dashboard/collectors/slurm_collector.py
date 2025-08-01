@@ -46,6 +46,7 @@ class SlurmCollector:
         """Start the Slurm metrics collection loop."""
         while True:
             node_statuses = await self.fetch_slurm_metrics()
+            print(f"[DEBUG] SlurmCollector found {len(node_statuses)} nodes: {list(node_statuses.keys())}")
             for node, status in node_statuses.items():
                 await self.cluster_state.update_slurm_status(node, status)
             await asyncio.sleep(10)
